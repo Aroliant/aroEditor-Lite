@@ -1,0 +1,260 @@
+@import url('opsans/stylesheet.css');
+body{
+	margin: 0;	
+}
+.editorInspector{
+	width: 1024px;
+	margin: 0px auto;
+	z-index: 99;
+}
+.aroEditorMainMenu{
+	
+}
+.titler{
+	width: 989px;
+	height: 35px;
+	border: 1px solid #DFD9D9;
+	margin-bottom: 9px;
+	padding-left: 10px;
+	margin-top: 10px;
+}
+#aro_Editor{
+	border:1px solid #DFD9D9; 
+	width:1000px; 
+	height:400px;
+}
+.addFontSans{
+	font-family: 'Open Sans',sans-serif;
+}
+.display{
+	background: #D6D6D6;
+	width: 1002px;
+	height: 40px;
+	margin: 0px;
+	margin-top: -5px;
+	padding: 0px;
+}
+#digiDisplay{
+	font-size: 12px;
+	font-family: arial,sans-serif;
+	color: #505050;
+	margin:10px;
+	position:absolute;
+}
+.edit-icon{
+	background-color: #FFFFFF;
+	border: 1px solid #D8D5D5;
+	margin: 0px -3px 0px 0px;
+	padding: 2px 6px 4px 6px;
+}
+.edit-icon:hover{
+	background-color: #CECCCC;
+}
+.trans:hover,.trans{
+	webkit-transition: background-color .1s linear;
+	  -moz-transition: background-color .1s linear;
+	    transition: background-color .1s linear;
+}
+.aro-edit-button{
+	margin-top: 10px;
+	background: #0A91EB; 
+	height: 35px;  
+	border: 0;      
+	border-radius: 4px;
+	color: white;
+}
+.redder{
+	background: #F50A2F;
+	webkit-transition: background-color .1s linear;
+	  -moz-transition: background-color .1s linear;
+	    transition: background-color .1s linear;
+}
+.greener{
+	background: #42B863;
+	webkit-transition: background-color .1s linear;
+	  -moz-transition: background-color .1s linear;
+	    transition: background-color .1s linear;
+}
+.uploaderBtn{
+	margin-top: 10px;
+	background: #1CAA71; 
+	height: 35px;  
+	border: 1px solid #12AA43;      
+	border-radius: 4px;
+}
+.uploaderBtn >a{
+	color: white;
+	text-decoration: none;
+}
+.floatterright{
+	float: right;
+	font-size: 12px;
+	font-family: arial,sans-serif;
+	color: #838080;
+	width: 100px;
+	margin-top: 0px;
+}
+.floatterright > span{
+	padding: 0px 0px 0px 0px;
+}
+.floatterright > input{
+    margin: 10px 13px 0px 8px;
+	
+    position: relative;
+    top: 2px;
+}
+.separator{
+    margin: 2px;	
+}
+.fSizeSelector{
+	list-style: none;
+	display: inline-block;
+	position: absolute;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-top: 22px;
+	margin-left: -56px;
+	border: 1px solid #E4E4E4;
+}
+.fSizeSelector li:hover{
+	background:#DFDFDF;
+	webkit-transition: background-color .1s linear;
+	  -moz-transition: background-color .1s linear;
+	    transition: background-color .1s linear;
+}
+.fmenu{
+	display: none;
+	background: #FFFFFF;
+	margin-top: 0px;
+	padding: 0px 0px 0px 4px;
+	border-bottom: 1px solid #F8F8F8;
+	font-family: sans-serif;
+}
+.colorpicker{
+	display: none;
+	position: fixed;
+	width: 224px;
+	height: 96px;
+	background: #EEECEC;
+	margin-left: 208px;
+	padding: 5px;
+}
+.picBoxColor:hover{
+	width: 14px;
+	height: 14px;
+	opacity:1;
+	cursor: pointer;
+}
+.picBoxColor{
+	opacity:.9;
+	width: 15px;
+	height: 15px;
+	border: none;
+	margin: 0px 2px 2px 1px;
+	padding: 0px;
+	display: inline-block;
+}
+.imgExplorer{
+	display: none;
+	position: fixed;
+	width: 750px;
+	height: 300px;
+	background: #FFFFFF;
+	z-index: 9999;
+	top: 10%;
+	left: 20%;
+	border: 2px solid #CCC;
+	padding: 20px;
+	border-radius: 10px;
+}
+.imgExplorer > span{
+	float: right;
+	margin: -12px;
+}
+#aroEditorMainMenu{
+	height: 24px;
+	background: #E2E2E2;
+	width: 995px;
+	padding: 4px;
+}
+
+.fmenu > h1, h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 10px;
+}
+.fmenu > p{
+	margin: 0;
+	padding: 5px;
+}
+.fmenu > pre{
+	margin: 0;
+	padding: 5px;
+}
+.fmenu > blockquote{
+	margin: 0;
+	padding: 5px;
+}
+blockquote{
+border-left: 5px solid #eee;
+}
+.uploaderLinkBox{  
+	background: #FFFFFF;  
+	border-radius: 5px;    
+	border: solid 1px #D5CCCC;  
+	color: inherit;  
+	display: inline-table;  
+	outline: 0;  
+	padding: 5px 6px 5px 6px;  
+	height: 40px;  text-decoration: none;  
+	width: 87%;  opacity: 1;  
+	font-family: 'Open Sans',sans-serif;  font-size: 14px;	
+}
+.linkPop{
+	display: none;
+	position: fixed;
+	width: 750px;
+	background: #FFFFFF;
+	z-index: 9999;
+	top: 10%;
+	left: 20%;
+	border: 2px solid #CCC;
+	padding: 20px;
+	border-radius: 10px;
+}
+.linkPop > span{
+	float: right;
+	margin: -12px;
+}
+.linkBox{
+	background: #FFFFFF;  
+	border-radius: 5px;    
+	border: solid 1px #D5CCCC;  
+	color: inherit;  
+	display: inline-table;  
+	outline: 0;  
+	padding: 5px 6px 5px 6px;  
+	height: 40px;  text-decoration: none;  
+	width: 87%;  opacity: 1;  
+	font-family: 'Open Sans',sans-serif;  font-size: 14px;	
+}
+.loader{
+	background:#000;
+	opacity: 0.5;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.previewShower{
+	display: none;
+	width: 986px;
+	margin: 58px 12%;
+	position: absolute;
+	background: #F5F5F5;
+	height: 413px;
+	overflow-y: scroll;
+	padding: 10px;
+}
+.previewShower{
+	font-family: 'Open Sans',sans-serif;
+}

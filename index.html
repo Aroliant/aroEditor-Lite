@@ -1,0 +1,97 @@
+<!Doctype html>
+<html>
+<head>
+<title>Aro Editor</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="editor.css">
+<link rel="stylesheet" type="text/css" href="libs/font-awesome-4.2.0/css/font-awesome.min.css">
+
+
+</head>
+<body onload="initializeEditor();">
+<div class="loader"></div>
+<div class="previewShower">
+  <img src="images/preview.png" style="margin:-19px 0px -19px -16px;">
+  <div></div>
+  <br/>
+</div>
+<br/><br/>
+<section class="editorInspector">
+<form action="" name="aroform" id="aroform" method="post">
+<div id="aroEditorMainMenu">
+<button type="button" class="edit-icon trans" style="display:inline;" onclick="toggleFontMenu()"><span>Style</span>
+  </button>
+  <span class="separator">&nbsp;</span>
+  <ul class="fSizeSelector">  
+    <li class="fmenu" onClick="textFormat('p');"><p>Normal</p></li>
+    <li class="fmenu" onClick="textFormat('pre');"><pre>Code</pre>
+    <li class="fmenu" onClick="textFormat('blockquote');"><blockquote>Quote</blockquote></li>
+    <li class="fmenu" onClick="textFormat('h1');"><h1>Header 1</h1></li>
+    <li class="fmenu" onClick="textFormat('h2');"><h2>Header 2</h2></li>
+    <li class="fmenu" onClick="textFormat('h3');"><h3>Header 3</h3></li>
+    <li class="fmenu" onClick="textFormat('h4');"><h4>Header 4</h4></li>
+    <li class="fmenu" onClick="textFormat('h5');"><h5>Header 5</h5></li>
+    <li class="fmenu" onClick="textFormat('h6');"><h6>Header 6</h6></li>  
+  </ul>
+  <button type="button" class="edit-icon trans" onClick="undo()"><i class="fa fa-undo icon-undo"></i></button>
+  <button type="button" class="edit-icon trans" onClick="redo()"><i class="fa fa-repeat icon-repeat"></i></button>
+  <span class="separator">&nbsp;</span>
+  <button type="button" class="edit-icon trans" onClick="makeBold()"><i class="fa fa-bold icon-bold"></i></button>
+  <button type="button" class="edit-icon trans" onClick="makeUline()"><i class="fa fa-underline"></i></button>
+  <button type="button" class="edit-icon trans" onClick="makeItalic()"><i class="fa fa-italic icon-italic"></i></button>
+  <span class="separator">&nbsp;</span>
+  
+  
+  <button type="button" style="display:inline;" class="edit-icon trans" onClick="changefColorPop()"><i class="fa fa-font icon-font"></i></button>
+<div class="colorpicker" id="colorPicker">
+</div>
+  <span class="separator">&nbsp;</span>
+  <button type="button" class="edit-icon trans" onClick="alignLeft()"><i class="fa fa-align-left icon-align-left"></i></button>
+  <button type="button" class="edit-icon trans" onClick="alignCenter()"><i class="fa fa-align-center icon-align-center"></i></button>
+  <button type="button" class="edit-icon trans" onClick="alignRight()"><i class="fa fa-align-right icon-align-right"></i></button>
+  <button type="button" class="edit-icon trans" onClick="justify()"><i class="fa fa-align-justify icon-align-justify"></i></button>
+  <span class="separator">&nbsp;</span>
+  <button type="button" class="edit-icon trans" onClick="createOL()"><i class="fa fa-list-ul"></i></button>
+  <button type="button" class="edit-icon trans" onClick="createUL()"><i class="fa fa-list-ol"></i></button>
+  <button type="button" class="edit-icon trans" onClick="createLinkPop()"><i class="fa fa-link"></i></button>
+  <button type="button" class="edit-icon trans" onClick="removeLink()"><i class="fa fa-unlink"></i></button>
+  <button type="button" class="edit-icon trans" onClick="showImageExplorer()"><i class="fa fa-picture-o icon-picture"></i></button>
+<button type="button" class="edit-icon trans" onClick="removeFormatting()"><i class="fa fa-eraser icon-eraser"></i></button>
+</div>
+<textarea style="display:none;" name="editorTArea" id="editorTArea" cols="100" rows="14"></textarea>
+<iframe name="aro_Editor" id="aro_Editor" ></iframe>
+<div class="display">
+  <span id="digiDisplay"></span>
+  <div  class="floatterright">
+  <span>Auto Save</span>
+  <input type="checkbox" id="autosavebox"></div>
+</div>
+<!--Saving Buttons -->
+<input name="saver" class="aro-edit-button btn_browser-saver" type="button" value="Save on Browser" onClick="saveOnBrowser();"/>
+<input name="saver" class="aro-edit-button btn_previewer" type="button" value="Preview" onClick="preview();"/>
+<input name="saver" class="aro-edit-button btn_previewer closePrev" type="button" value="Close preview" onClick="hidePreview();" style="display:none;" />
+</form>
+</section>
+<!-- Image Uploader -->
+<div class="imgExplorer">
+  <span onClick="closePopUload()"><img src="images/closer.png"></span>
+  <form name="imgUploader">
+    <h2 class="addFontSans">Paste a link</h2>
+    <input type="text" placeHolder="Enter the link" name="link" class="uploaderLinkBox">
+    <button onclick="insertImage()" type="button" class="aro-edit-button">Insert Image</button>
+  </form>
+</div>
+<!-- Link Pop -->
+<div class="linkPop">
+  <span onClick="closePopLink()"><img src="images/closer.png"></span>
+  <form name="linker">
+    <h2 class="addFontSans">Paste a link</h2>
+    <input type="text" placeHolder="Enter the link" name="link" class="linkBox">
+    <button onclick="createLink()" type="button" class="aro-edit-button">Link</button>
+  </form>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="editorbase.js"></script>
+
