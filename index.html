@@ -8,7 +8,7 @@
 
 
 </head>
-<body onload="initializeEditor();">
+<body onload="ae.initializeEditor();">
 <div class="loader"></div>
 <div class="previewShower">
   <img src="images/preview.png" style="margin:-19px 0px -19px -16px;">
@@ -23,40 +23,40 @@
   </button>
   <span class="separator">&nbsp;</span>
   <ul class="fSizeSelector">  
-    <li class="fmenu" onClick="textFormat('p');"><p>Normal</p></li>
-    <li class="fmenu" onClick="textFormat('pre');"><pre>Code</pre>
-    <li class="fmenu" onClick="textFormat('blockquote');"><blockquote>Quote</blockquote></li>
-    <li class="fmenu" onClick="textFormat('h1');"><h1>Header 1</h1></li>
-    <li class="fmenu" onClick="textFormat('h2');"><h2>Header 2</h2></li>
-    <li class="fmenu" onClick="textFormat('h3');"><h3>Header 3</h3></li>
-    <li class="fmenu" onClick="textFormat('h4');"><h4>Header 4</h4></li>
-    <li class="fmenu" onClick="textFormat('h5');"><h5>Header 5</h5></li>
-    <li class="fmenu" onClick="textFormat('h6');"><h6>Header 6</h6></li>  
+    <li class="fmenu" onClick="ae.textFormat('p');"><p>Normal</p></li>
+    <li class="fmenu" onClick="ae.textFormat('pre');"><pre>Code</pre>
+    <li class="fmenu" onClick="ae.textFormat('blockquote');"><blockquote>Quote</blockquote></li>
+    <li class="fmenu" onClick="ae.textFormat('h1');"><h1>Header 1</h1></li>
+    <li class="fmenu" onClick="ae.textFormat('h2');"><h2>Header 2</h2></li>
+    <li class="fmenu" onClick="ae.textFormat('h3');"><h3>Header 3</h3></li>
+    <li class="fmenu" onClick="ae.textFormat('h4');"><h4>Header 4</h4></li>
+    <li class="fmenu" onClick="ae.textFormat('h5');"><h5>Header 5</h5></li>
+    <li class="fmenu" onClick="ae.textFormat('h6');"><h6>Header 6</h6></li>  
   </ul>
-  <button type="button" class="edit-icon trans" onClick="undo()"><i class="fa fa-undo icon-undo"></i></button>
-  <button type="button" class="edit-icon trans" onClick="redo()"><i class="fa fa-repeat icon-repeat"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.undo()"><i class="fa fa-undo icon-undo"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.redo()"><i class="fa fa-repeat icon-repeat"></i></button>
   <span class="separator">&nbsp;</span>
-  <button type="button" class="edit-icon trans" onClick="makeBold()"><i class="fa fa-bold icon-bold"></i></button>
-  <button type="button" class="edit-icon trans" onClick="makeUline()"><i class="fa fa-underline"></i></button>
-  <button type="button" class="edit-icon trans" onClick="makeItalic()"><i class="fa fa-italic icon-italic"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.makeBold()"><i class="fa fa-bold icon-bold"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.makeUline()"><i class="fa fa-underline"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.makeItalic()"><i class="fa fa-italic icon-italic"></i></button>
   <span class="separator">&nbsp;</span>
   
   
-  <button type="button" style="display:inline;" class="edit-icon trans" onClick="changefColorPop()"><i class="fa fa-font icon-font"></i></button>
+  <button type="button" style="display:inline;" class="edit-icon trans" onClick="ae.changefColorPop()"><i class="fa fa-font icon-font"></i></button>
 <div class="colorpicker" id="colorPicker">
 </div>
   <span class="separator">&nbsp;</span>
-  <button type="button" class="edit-icon trans" onClick="alignLeft()"><i class="fa fa-align-left icon-align-left"></i></button>
-  <button type="button" class="edit-icon trans" onClick="alignCenter()"><i class="fa fa-align-center icon-align-center"></i></button>
-  <button type="button" class="edit-icon trans" onClick="alignRight()"><i class="fa fa-align-right icon-align-right"></i></button>
-  <button type="button" class="edit-icon trans" onClick="justify()"><i class="fa fa-align-justify icon-align-justify"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.alignLeft()"><i class="fa fa-align-left icon-align-left"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.alignCenter()"><i class="fa fa-align-center icon-align-center"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.alignRight()"><i class="fa fa-align-right icon-align-right"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.justify()"><i class="fa fa-align-justify icon-align-justify"></i></button>
   <span class="separator">&nbsp;</span>
-  <button type="button" class="edit-icon trans" onClick="createOL()"><i class="fa fa-list-ul"></i></button>
-  <button type="button" class="edit-icon trans" onClick="createUL()"><i class="fa fa-list-ol"></i></button>
-  <button type="button" class="edit-icon trans" onClick="createLinkPop()"><i class="fa fa-link"></i></button>
-  <button type="button" class="edit-icon trans" onClick="removeLink()"><i class="fa fa-unlink"></i></button>
-  <button type="button" class="edit-icon trans" onClick="showImageExplorer()"><i class="fa fa-picture-o icon-picture"></i></button>
-<button type="button" class="edit-icon trans" onClick="removeFormatting()"><i class="fa fa-eraser icon-eraser"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.createOL()"><i class="fa fa-list-ul"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.createUL()"><i class="fa fa-list-ol"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.createLinkPop()"><i class="fa fa-link"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.removeLink()"><i class="fa fa-unlink"></i></button>
+  <button type="button" class="edit-icon trans" onClick="ae.showImageExplorer()"><i class="fa fa-picture-o icon-picture"></i></button>
+<button type="button" class="edit-icon trans" onClick="ae.removeFormatting()"><i class="fa fa-eraser icon-eraser"></i></button>
 </div>
 <textarea style="display:none;" name="editorTArea" id="editorTArea" cols="100" rows="14"></textarea>
 <iframe name="aro_Editor" id="aro_Editor" ></iframe>
@@ -67,27 +67,27 @@
   <input type="checkbox" id="autosavebox"></div>
 </div>
 <!--Saving Buttons -->
-<input name="saver" class="aro-edit-button btn_browser-saver" type="button" value="Save on Browser" onClick="saveOnBrowser();"/>
-<input name="saver" class="aro-edit-button btn_previewer" type="button" value="Preview" onClick="preview();"/>
-<input name="saver" class="aro-edit-button btn_previewer closePrev" type="button" value="Close preview" onClick="hidePreview();" style="display:none;" />
+<input name="saver" class="aro-edit-button btn_browser-saver" type="button" value="Save on Browser" onClick="ae.saveOnBrowser();"/>
+<input name="saver" class="aro-edit-button btn_previewer" type="button" value="Preview" onClick="ae.preview();"/>
+<input name="saver" class="aro-edit-button btn_previewer closePrev" type="button" value="Close preview" onClick="ae.hidePreview();" style="display:none;" />
 </form>
 </section>
 <!-- Image Uploader -->
 <div class="imgExplorer">
-  <span onClick="closePopUload()"><img src="images/closer.png"></span>
+  <span onClick="ae.closePopUload()"><img src="images/closer.png"></span>
   <form name="imgUploader">
     <h2 class="addFontSans">Paste a link</h2>
     <input type="text" placeHolder="Enter the link" name="link" class="uploaderLinkBox">
-    <button onclick="insertImage()" type="button" class="aro-edit-button">Insert Image</button>
+    <button onclick="ae.insertImage()" type="button" class="aro-edit-button">Insert Image</button>
   </form>
 </div>
 <!-- Link Pop -->
 <div class="linkPop">
-  <span onClick="closePopLink()"><img src="images/closer.png"></span>
+  <span onClick="ae.closePopLink()"><img src="images/closer.png"></span>
   <form name="linker">
     <h2 class="addFontSans">Paste a link</h2>
     <input type="text" placeHolder="Enter the link" name="link" class="linkBox">
-    <button onclick="createLink()" type="button" class="aro-edit-button">Link</button>
+    <button onclick="ae.createLink()" type="button" class="aro-edit-button">Link</button>
   </form>
 </div>
 </body>
