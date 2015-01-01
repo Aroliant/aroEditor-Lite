@@ -109,17 +109,17 @@ var ae = {
 	removeFormatting:function (){
 		 aro_Editor.document.execCommand('RemoveFormat'); 
 	},
-	
+
 	toggleFontMenu: function (){
 		var get=document.getElementsByClassName("fmenu");
 		$('.fmenu').delay(50).fadeToggle(150);
 	},
-	
+
 	closePopUload: function (){
 		$('.imgExplorer').delay(50).fadeOut(200);
 		$('.loader').delay(50).fadeOut(200);
 	},
-	
+
 	//On Broser Saver Button.
 	saveOnBrowser : function (){
 		var data = $("#aro_Editor").contents().find('body').html();
@@ -127,20 +127,20 @@ var ae = {
 		$('.btn_browser-saver').removeClass('redder').addClass('greener');
 		$('#digiDisplay').show().html('Saved on Broswer').delay(2500).fadeOut(100);
 	},
-	
+
 	releaseSavers:	function (){
 		$('.btn_browser-saver').removeClass('greener').addClass('redder');
 		$('.btn_saver').removeClass('greener').addClass('redder');
 		
 	},
-	
+
 	preview:	function(){
 		var data = $("#aro_Editor").contents().find('body').html();
 		$('.previewShower').show();
 		$('.previewShower div').html(data);
 		$('.closePrev').show();
 	},
-	
+
 	hidePreview:	function (){
 		$('.previewShower').hide();
 		$('.closePrev').hide();
@@ -155,7 +155,7 @@ $(document).ready(function(){
 		var data2=$("#aro_Editor").contents().find('body').html();
 			if(data1!==data2)
 			{
-				releaseSavers(); // Changes the color when the user starts editing it
+				ae.releaseSavers(); // Changes the color when the user starts editing it
 			}
 	});
 });
@@ -164,7 +164,7 @@ $(document).ready(function(){
 var colors = ["#FFFFFF","#C0C0C0","#808080","#b00b00","#de1e7e","#e1e100","#BADA55","#F0FEAF","#ac1d1c","#facade","#ABACA5","#ABA5ED","#ABBE55","#ABE1E5","#AB0DED","#AB011A","#ACCEDE","#ACCE55","#ACCE55","#A1D015","#A1D05E","#A11E6E","#A11E1E","#A110D5","#A55E55","#BABB1E","#BABE15","#BADA55","#BA6A55","#BA6E15","#BA66ED","#BA15A5","#BA5505","#BEAD1E","#BEEFED","#BEF1EA","#BE6A11","#BE66ED","#BE16A5","#B1ADE5","#B1EED5","#807B7B","#696868","#525151","#302F2F","#161616","#000000","#3603FF","#5739CC","#08BDAE","#27726C","#0056F0","#268A52","#26728A","#61610E","#E606B0","#6D5F3A","#0BBD2E","#B568CE","red"];
 var colorDataHTML = "";
 for(var i=0;i<colors.length;i++){
-	colorDataHTML	+=	'<div type="button" style="background:'+ colors[i] +';" onClick="changefColor(\''+ colors[i] +'\')" class="picBoxColor">&nbsp;</div>';
+	colorDataHTML	+=	'<div type="button" style="background:'+ colors[i] +';" onClick="ae.changefColor(\''+ colors[i] +'\')" class="picBoxColor">&nbsp;</div>';
 };
 
 $("#colorPicker").html(colorDataHTML);
