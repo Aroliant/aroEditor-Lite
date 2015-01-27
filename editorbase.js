@@ -274,7 +274,3 @@ function readImage() {
 
 document.getElementById("b64upload").addEventListener("change", readImage, false);
 
-$(document).ready(function() 
-{   
-   $('a[title],button[title]').qtip();
-});
