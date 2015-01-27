@@ -75,12 +75,17 @@
 </section>
 <!-- Image Uploader -->
 <div class="imgExplorer">
-  <span onClick="ae.closePopUload()"><img src="images/closer.png"></span>
+  <span onClick="ae.closePopUload()"><img src="images/closer.png"  class="closeButton"></span>
   <form name="imgUploader">
     <h2 class="addFontSans">Paste a link</h2>
     <input type="text" placeHolder="Enter the link" name="link" class="uploaderLinkBox">
-    <button onclick="ae.insertImage()" type="button" class="aro-edit-button">Insert Image</button>
+    <button onclick="ae.insertImage()" type="button" class="aro-edit-button" style="border-radius: 0px 5px 5px 0px;">Insert Image</button>
   </form>
+  <br/><br/>
+  <hr/>
+  <h2 class="addFontSans">Upload</h2>
+  <input type='file' id="b64upload"/>
+  <button onclick="ae.insert64Image()" type="button" class="aro-edit-button">Insert</button>
 </div>
 <!-- Link Pop -->
 <div class="linkPop">
