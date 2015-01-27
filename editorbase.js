@@ -225,7 +225,6 @@ window.setInterval(function(){
 
 var ext ={
 	setStyle : function(data,e){
-		console.log(data);
 /** For FONT Filteration	*/
 		if(data=='FONT'||data=='SPAN')
 		{
