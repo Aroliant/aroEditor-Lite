@@ -233,7 +233,6 @@ var ext ={
 /* Find Main Tag */
 
 
-		console.log(data);
 		$('.sdf').removeClass('selectHighlight');
 		switch (data){
 			case 'H1' 			: this.set('Header 1'); break;
