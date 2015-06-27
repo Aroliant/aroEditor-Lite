@@ -6,7 +6,7 @@ A WYSIWYG Editor
 ## Features
 
 * Offline Saving
-* Intergrated image uploader
 * Auto Saver 
 * File Uploader
 * Video & Image Embedding
+* Enhanced Previewer
